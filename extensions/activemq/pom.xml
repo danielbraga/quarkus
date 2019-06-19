@@ -2,7 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
     <parent>
         <artifactId>quarkus-build-parent</artifactId>
         <groupId>io.quarkus</groupId>
@@ -11,19 +10,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>quarkus-camel-parent</artifactId>
-    <name>Quarkus - Camel</name>
+    <artifactId>quarkus-activemq-parent</artifactId>
+    <name>Quarkus - ActiveMQ</name>
+
     <packaging>pom</packaging>
-
     <modules>
-        <module>camel-core</module>
-        <module>camel-aws-s3</module>
-        <module>camel-aws-sqs</module>
-        <module>camel-salesforce</module>
-        <module>camel-netty4-http</module>
-        <module>camel-infinispan</module>
-        <module>camel-seda</module>
-        <module>camel-activemq</module>
+        <module>deployment</module>
+        <module>runtime</module>
     </modules>
-
 </project>

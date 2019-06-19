@@ -162,6 +162,7 @@
         <bootstrap.version>3.1.0</bootstrap.version>
         <keycloak.version>6.0.1</keycloak.version>
         <subethasmtp.version>3.1.7</subethasmtp.version>
+        <activemq-client.version>5.15.9</activemq-client.version>
     </properties>
 
     <dependencyManagement>
@@ -254,6 +255,11 @@
             </dependency>
             <dependency>
                 <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-activemq</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-camel-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -280,6 +286,16 @@
             <dependency>
                 <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-camel-infinispan</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-camel-activemq</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-camel-seda</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -604,6 +620,22 @@
                         <artifactId>saaj-impl</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-activemq</artifactId>
+                <version>${camel.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-seda</artifactId>
+                <version>${camel.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-client</artifactId>
+                <version>${activemq-client.version}</version>
             </dependency>
 
             <!-- ap4k -->
